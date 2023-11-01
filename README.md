@@ -202,4 +202,38 @@ Para executar o projeto, siga estas etapas:
     python receiver.py
     ```
 
-Agora o projeto está pronto para produzir e consumir mensagens Kafka de feitiços utilizando o Kafka com Docker Compose.
+Agora o projeto está pronto para produzir e consumir mensagens Kafka de feitiços utilizando o Kafka com Docker Compose. Certifique-se de estar **dentro do terminal na pasta S2_Kafka ao executar os scripts**.
+
+## 7. Resultados esperados
+
+
+1. O Docker Compose iniciará os serviços Kafka e Zookeeper no ambiente de contêineres.
+2. O script **`sender.py`** fará solicitações na API Harry Potter para obter feitiços. Esses feitiços serão produzidos no tópico "HarryPotter" no Kafka.
+3. O script **`receiver.py`** estará constantemente consumindo mensagens do tópico "HarryPotter" no Kafka e exibindo os feitiços recebidos no console.
+4. Você verá mensagens impressas no console indicando que os feitiços foram enviados com sucesso para o tópico Kafka e que estão sendo consumidos pelo consumidor Kafka.
+
+
+<br>
+
+<img src="./assets/resultadoProjeto.gif" alt="Resultados esperados">
+
+<br>
+
+Certifique-se de que o Docker Compose esteja em execução e que ambos os scripts Python estejam em execução em terminais separados para obter esses resultados. Isso demonstrará o fluxo de produção e consumo de mensagens no ambiente Kafka configurado.
+
+
+## 8. Referências Bibliográficas 
+
+1. **Docker Compose Documentação.** Disponível em: [github.com/mrugankray](https://github.com/mrugankray). Acesso em: 30 out. 2023.
+
+2. **Confluent Kafka Python.** Disponível em: [github.com/felipesilvamelo28](https://github.com/felipesilvamelo28). Acesso em: 30 out. 2023.
+
+3. **API universo Harry Potter.** Disponível em: [https://hp-api.onrender.com/api/spells](https://hp-api.onrender.com/api/spells). Acesso em: 30 out. 2023.
+
+4. **Exemplo de configuração Kafka.** Disponível em: [github.com/mrugankray](https://github.com/mrugankray). Acesso em: 30 out. 2023.
+
+5. **Exemplo de configuração Kafka e Python.** Disponível em: [github.com/felipesilvamelo28](https://github.com/felipesilvamelo28). Acesso em: 30 out. 2023.
+
+
+
+
